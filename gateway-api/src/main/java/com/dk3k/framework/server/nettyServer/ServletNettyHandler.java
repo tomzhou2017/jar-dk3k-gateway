@@ -29,9 +29,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-/**
- * Created by lilin on 2016/7/26.
- */
 public class ServletNettyHandler extends ChannelInboundHandlerAdapter {
 
     private static final Logger logger = LoggerFactory.getLogger(ServletNettyHandler.class);

@@ -19,9 +19,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.mock.web.MockServletConfig;
 import org.springframework.mock.web.MockServletContext;
 
-/**
- * Created by lilin on 2016/7/26.
- */
 public class DispatcherServletChannelInitializer extends ChannelInitializer<SocketChannel> {
 
     private final DispatcherServlet dispatcherServlet;

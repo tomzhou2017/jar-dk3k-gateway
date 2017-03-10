@@ -4,9 +4,6 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by lilin on 2016/11/12.
- */
 public class FieldDataType {
 
     // both in table class and sub-level family class

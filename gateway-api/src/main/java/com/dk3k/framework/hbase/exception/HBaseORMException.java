@@ -1,8 +1,5 @@
 package com.dk3k.framework.hbase.exception;
 
-/**
- * Created by lilin on 2016/11/11.
- */
 @SuppressWarnings("serial")
 public class HBaseORMException extends Exception {
 

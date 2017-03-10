@@ -4,9 +4,6 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 import java.util.Date;
 
-/**
- * Created by lilin on 2016/11/14.
- */
 public class DateValue implements Value {
 
     private Date dateValue;

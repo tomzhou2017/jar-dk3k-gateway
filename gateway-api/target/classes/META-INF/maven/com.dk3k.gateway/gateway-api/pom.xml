@@ -221,7 +221,7 @@
 			<version>1.5.4</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>cn.jpush.api</groupId>
 			<artifactId>jpush-client</artifactId>
 			<version>3.0.1</version>
@@ -230,7 +230,7 @@
 			<groupId>xinge</groupId>
 			<artifactId>xinge-client</artifactId>
 			<version>1.1.1</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>com.aliyun.openservices</groupId>
 			<artifactId>aliyun-openservices</artifactId>
@@ -317,8 +317,25 @@
 		</dependency>
 
 		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.7</version>
+		</dependency>
+			
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
+			<version>1.7.21</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
 			<version>1.7.21</version>
 		</dependency>
 
@@ -340,7 +357,7 @@
 			<artifactId>spring-jms</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-core</artifactId>
 			<version>5.7.0</version>
@@ -354,7 +371,7 @@
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-all</artifactId>
 			<version>5.11.0</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>commons-pool</groupId>
 			<artifactId>commons-pool</artifactId>
@@ -509,11 +526,23 @@
 			<groupId>org.apache.hbase</groupId>
 			<artifactId>hbase-common</artifactId>
 			<version>1.2.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-log4j12</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.hbase</groupId>
 			<artifactId>hbase-client</artifactId>
 			<version>1.2.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-log4j12</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<dependency>

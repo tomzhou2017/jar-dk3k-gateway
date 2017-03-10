@@ -11,8 +11,6 @@ import org.springframework.core.task.AsyncTaskExecutor;
 
 /**
  * 
- * @author liat.zhang@gmail.com
- * @date 2016年9月15日-下午9:13:51
  * @description
  *
  */

@@ -13,9 +13,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by lilin on 2016/8/10.
- */
 public class RequestParser {
 
     public static Map<String, String> parseParams(FullHttpRequest request) throws IOException {

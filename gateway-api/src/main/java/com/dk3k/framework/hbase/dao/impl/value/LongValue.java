@@ -2,9 +2,6 @@ package com.dk3k.framework.hbase.dao.impl.value;
 
 import org.apache.hadoop.hbase.util.Bytes;
 
-/**
- * Created by lilin on 2016/11/14.
- */
 public class LongValue implements Value {
 
     private long longValue;

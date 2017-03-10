@@ -23,10 +23,6 @@ import org.slf4j.LoggerFactory;
  * 如果使用同一个,会创建比较多的watcher监听器
  * 该对象可能会导致死锁问题,不建议使用
  * 
- * @PackageName:com.mobanker.zk.lock
- * @ClassName:ZookeeperLock
- * @author xiongweitao
- * @date 2016年9月19日 上午11:13:35
  */
 public class ZkClientLock {
 
@@ -49,10 +45,6 @@ public class ZkClientLock {
 	 * 
 	 * Description:获取完整的父节点
 	 * 
-	 * @param groupPath
-	 * @return
-	 * @author xiongweitao
-	 * @date 2016年9月18日 下午4:07:27
 	 */
 	private String getParentPath(String groupPath) {
 		return ZkLockConstant.ROOT_NODE + "/" + groupPath;
@@ -61,13 +53,6 @@ public class ZkClientLock {
 	/**
 	 * 
 	 * Description:层级创建永久父节点
-	 * 
-	 * @param zk
-	 * @param path
-	 * @throws KeeperException
-	 * @throws InterruptedException
-	 * @author xiongweitao
-	 * @date 2016年9月18日 下午4:18:31
 	 */
 	private void createParentPath(ZkClient zk, String path) throws KeeperException, InterruptedException {
 		if (path == null || path == "") {
@@ -85,14 +70,6 @@ public class ZkClientLock {
 	 * 
 	 * Description:检查本客户端是否得到了分布式锁
 	 * 
-	 * @param zk
-	 * @param groupPath
-	 * @param myName
-	 * @return
-	 * @throws KeeperException
-	 * @throws InterruptedException
-	 * @author xiongweitao
-	 * @date 2016年9月18日 下午1:39:49
 	 */
 	public boolean checkState(ZkClient zk, String groupPath, String myName) throws KeeperException, InterruptedException {
 		// 获取所有的子节点
@@ -123,15 +100,6 @@ public class ZkClientLock {
 	/**
 	 * 
 	 * Description:若本客户端没有得到分布式锁，则进行监听本节点前面的节点（避免羊群效应）
-	 * 
-	 * @param zk
-	 * @param groupPath
-	 * @param myName
-	 * @param executor
-	 * @throws KeeperException
-	 * @throws InterruptedException
-	 * @author xiongweitao
-	 * @date 2016年9月18日 下午1:41:28
 	 */
 	public void listenNode(final ZkClient zk, final String groupPath, final String myName, final Executor executor) throws KeeperException,
 			InterruptedException {
@@ -207,14 +175,6 @@ public class ZkClientLock {
 	/**
 	 * 
 	 * Description:竞争锁并执行
-	 * 
-	 * @param zk
-	 * @param groupPath
-	 * @param executor
-	 * @throws KeeperException
-	 * @throws InterruptedException
-	 * @author xiongweitao
-	 * @date 2016年9月18日 下午5:12:14
 	 */
 	public void getLockAndDoJobSequence(ZkClient zk, String groupPath, Executor executor) throws KeeperException, InterruptedException {
 		if (zk == null || groupPath == null || executor == null) {
@@ -229,14 +189,6 @@ public class ZkClientLock {
 	/**
 	 * 
 	 * Description:竞争锁只有一个执行,即拿到锁的执行,拿不到锁的直接结束
-	 * 
-	 * @param zk
-	 * @param groupPath
-	 * @param executor
-	 * @throws KeeperException
-	 * @throws InterruptedException
-	 * @author xiongweitao
-	 * @date 2016年9月19日 下午3:21:24
 	 */
 	public void getLockAndDoJobOnce(ZkClient zk, String groupPath, Executor executor) throws KeeperException, InterruptedException {
 		if (zk == null || groupPath == null || executor == null) {
@@ -260,12 +212,6 @@ public class ZkClientLock {
 	/**
 	 * 
 	 * Description:删除指定节点,重试3次
-	 * 
-	 * @param zk
-	 * @param groupPath
-	 * @param myName
-	 * @author xiongweitao
-	 * @date 2016年9月19日 下午6:22:01
 	 */
 	private void deleteNode3Times(ZkClient zk, String groupPath, String myName) {
 		for (int i = 0; i < 3; i++) {

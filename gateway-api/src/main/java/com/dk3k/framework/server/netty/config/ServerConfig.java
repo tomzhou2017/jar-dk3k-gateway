@@ -1,19 +1,10 @@
 package com.dk3k.framework.server.netty.config;
 
-import io.netty.util.internal.SystemPropertyUtil;
-
 import java.nio.charset.Charset;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * 
- * @author liat.zhang@gmail.com
- * @date 2016年9月16日-下午10:11:11
- * @description <code>ServerConfig</code>为服务器提供全局配置信息
- *
- */
 public final class ServerConfig {
 
 	/** 日志对象 */

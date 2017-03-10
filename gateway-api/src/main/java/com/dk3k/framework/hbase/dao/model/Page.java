@@ -2,9 +2,6 @@ package com.dk3k.framework.hbase.dao.model;
 
 import java.util.List;
 
-/**
- * Created by lilin on 2017/2/13.
- */
 public class Page<T> {
 
     // 返回的结果集list

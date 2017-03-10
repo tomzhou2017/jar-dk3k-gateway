@@ -25,9 +25,6 @@ import com.dk3k.framework.hbase.dao.impl.value.ValueFactory;
 import com.dk3k.framework.hbase.exception.HBaseORMException;
 import com.dk3k.framework.hbase.support.BeanUtil;
 
-/**
- * Created by lilin on 2016/11/12.
- */
 public class DataMapper<T> {
 
     private static final Logger logger = LoggerFactory.getLogger(DataMapper.class);

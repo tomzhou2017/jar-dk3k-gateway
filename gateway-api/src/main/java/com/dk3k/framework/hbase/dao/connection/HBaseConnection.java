@@ -13,9 +13,6 @@ import org.springframework.core.io.Resource;
 import java.io.IOException;
 import java.util.Properties;
 
-/**
- * Created by lilin on 2016/11/11.
- */
 public class HBaseConnection {
 
     protected static final String HBASE_CONFIG_PROPERTIES = "configs/hbase.properties";

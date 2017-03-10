@@ -11,9 +11,6 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Created by lilin on 2016/7/26.
- */
 public class NettyServer {
 
     private static final Logger logger = LoggerFactory.getLogger(NettyServer.class);

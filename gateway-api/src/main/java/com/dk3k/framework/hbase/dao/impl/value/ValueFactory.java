@@ -6,9 +6,6 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Date;
 
-/**
- * Created by lilin on 2016/11/14.
- */
 public class ValueFactory {
 
     static Class<String> STRING = String.class;

@@ -10,9 +10,6 @@ import com.dk3k.framework.hbase.dao.impl.value.Value;
 import com.dk3k.framework.hbase.dao.model.Page;
 import com.dk3k.framework.hbase.exception.HBaseORMException;
 
-/**
- * Created by lilin on 2016/11/11.
- */
 public interface Dao<T> {
 
     /**

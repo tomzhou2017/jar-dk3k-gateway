@@ -1,0 +1,88 @@
+2017-03-10 19:34:57.574 [main] INFO  c.dk3k.framework.server.netty.config.ServerConfig - The server cpu processors: 4
+2017-03-10 19:34:58.189 [main] INFO  c.d.f.server.netty.servlet.impl.ServletContextImpl - Initializing Spring root WebApplicationContext
+2017-03-10 19:34:58.189 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2017-03-10 19:34:58.286 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Mar 10 19:34:58 CST 2017]; root of context hierarchy
+2017-03-10 19:34:58.325 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [dk3k-gateway-application.xml]
+2017-03-10 19:34:58.452 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-spring-aop.xml]
+2017-03-10 19:34:58.620 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-rabbitmq-producer.xml]
+2017-03-10 19:34:58.723 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-database.xml]
+2017-03-10 19:34:58.767 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-redis.xml]
+2017-03-10 19:34:58.815 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-spring-ehcache.xml]
+2017-03-10 19:34:58.923 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-fx-hbase.xml]
+2017-03-10 19:34:59.095 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-fx-rabbitmq.xml]
+2017-03-10 19:34:59.450 [main] INFO  o.s.c.a.ConfigurationClassBeanDefinitionReader - Skipping bean definition for [BeanMethod:name=connectionFactory,declaringClass=com.dk3k.framework.rabbitmq.MQConfig]: a definition for bean 'connectionFactory' already exists. This top-level bean definition is considered as an override.
+2017-03-10 19:34:59.503 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.dk3k.gateway.dao]' package. Please check your configuration.
+2017-03-10 19:34:59.582 [main] INFO  o.s.c.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [conf.properties]
+2017-03-10 19:34:59.605 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-03-10 19:35:00.025 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService  'threadPool'
+2017-03-10 19:35:01.110 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2017-03-10 19:35:01.150 [main] WARN  net.sf.ehcache.config.CacheConfiguration - Cache 'null' is set to eternal but also has TTI/TTL set.  To avoid this warning, clean up the config removing conflicting values of eternal, TTI and TTL. Effective configuration for Cache 'null' will be eternal='true', timeToIdleSeconds='0', timeToLiveSeconds='0'.
+2017-03-10 19:35:01.309 [main] WARN  net.sf.ehcache.config.CacheConfiguration - Configuration problem for cache forever: MaxEntriesLocalHeap equal or greater than MaxEntriesLocalDisk. This will result in useless disk storage.
+2017-03-10 19:35:01.374 [main] WARN  net.sf.ehcache.config.CacheConfiguration - Cache: report_oneday has a maxElementsInMemory of 0. This might lead to performance degradation or OutOfMemoryError at Terracotta client.From Ehcache 2.0 onwards this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory
+2017-03-10 19:35:01.454 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
+2017-03-10 19:35:01.460 [main] INFO  org.dozer.config.GlobalSettings - Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2017-03-10 19:35:01.463 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer.  Version: 5.2.1, Thread Name:main
+2017-03-10 19:35:01.465 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2017-03-10 19:35:01.466 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2017-03-10 19:35:01.471 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of the dozer bean mapper.
+2017-03-10 19:35:01.667 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase -2147482648
+2017-03-10 19:35:01.669 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3480 ms
+2017-03-10 19:35:01.679 [main] INFO  c.d.f.server.netty.servlet.impl.ServletContextImpl - Initializing Spring FrameworkServlet 'DispatcherServlet'
+2017-03-10 19:35:01.679 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'DispatcherServlet': initialization started
+2017-03-10 19:35:01.682 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'DispatcherServlet-servlet': startup date [Fri Mar 10 19:35:01 CST 2017]; parent: Root WebApplicationContext
+2017-03-10 19:35:01.684 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [dk3k-gateway-servlet.xml]
+2017-03-10 19:35:01.875 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-03-10 19:35:01.988 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/server/checkServer],methods=[GET],produces=[application/json]}" onto public com.dk3k.framework.core.dto.ResponseEntity com.dk3k.framework.core.web.ServerController.checkServer()
+2017-03-10 19:35:01.989 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/server/getActiveMap],methods=[GET],produces=[application/json]}" onto public com.dk3k.framework.core.dto.ResponseEntity com.dk3k.framework.core.web.ServerController.getActiveMap()
+2017-03-10 19:35:02.343 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'DispatcherServlet-servlet': startup date [Fri Mar 10 19:35:01 CST 2017]; parent: Root WebApplicationContext
+2017-03-10 19:35:02.444 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'DispatcherServlet-servlet': startup date [Fri Mar 10 19:35:01 CST 2017]; parent: Root WebApplicationContext
+2017-03-10 19:35:02.549 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'DispatcherServlet': initialization completed in 870 ms
+2017-03-10 19:35:02.930 [nioEventLoopGroup-2-1] ERROR io.netty.handler.logging.LoggingHandler - [id: 0xc92b99d1] REGISTERED
+2017-03-10 19:35:02.931 [nioEventLoopGroup-2-1] ERROR io.netty.handler.logging.LoggingHandler - [id: 0xc92b99d1] BIND: 0.0.0.0/0.0.0.0:8080
+2017-03-10 19:35:02.932 [main] INFO  c.dk3k.framework.server.netty.NettyServerBootstrap - Running http netty server on 8080 ...
+2017-03-10 19:35:02.933 [nioEventLoopGroup-2-1] ERROR io.netty.handler.logging.LoggingHandler - [id: 0xc92b99d1, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-03-10 19:35:31.221 [nioEventLoopGroup-2-1] ERROR io.netty.handler.logging.LoggingHandler - [id: 0xc92b99d1, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x4359e074, L:/127.0.0.1:8080 - R:/127.0.0.1:53897]
+2017-03-10 19:36:41.648 [main] INFO  c.dk3k.framework.server.netty.config.ServerConfig - The server cpu processors: 4
+2017-03-10 19:36:42.064 [main] INFO  c.d.f.server.netty.servlet.impl.ServletContextImpl - Initializing Spring root WebApplicationContext
+2017-03-10 19:36:42.064 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2017-03-10 19:36:42.120 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Mar 10 19:36:42 CST 2017]; root of context hierarchy
+2017-03-10 19:36:42.147 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [dk3k-gateway-application.xml]
+2017-03-10 19:36:42.240 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-spring-aop.xml]
+2017-03-10 19:36:42.379 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-rabbitmq-producer.xml]
+2017-03-10 19:36:42.471 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-database.xml]
+2017-03-10 19:36:42.561 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-redis.xml]
+2017-03-10 19:36:42.653 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-gateway-spring-ehcache.xml]
+2017-03-10 19:36:42.712 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-fx-hbase.xml]
+2017-03-10 19:36:42.785 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [springs/dk3k-fx-rabbitmq.xml]
+2017-03-10 19:36:42.981 [main] INFO  o.s.c.a.ConfigurationClassBeanDefinitionReader - Skipping bean definition for [BeanMethod:name=connectionFactory,declaringClass=com.dk3k.framework.rabbitmq.MQConfig]: a definition for bean 'connectionFactory' already exists. This top-level bean definition is considered as an override.
+2017-03-10 19:36:43.062 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.dk3k.gateway.dao]' package. Please check your configuration.
+2017-03-10 19:36:43.138 [main] INFO  o.s.c.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [conf.properties]
+2017-03-10 19:36:43.147 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-03-10 19:36:43.555 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService  'threadPool'
+2017-03-10 19:36:44.629 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2017-03-10 19:36:44.677 [main] WARN  net.sf.ehcache.config.CacheConfiguration - Cache 'null' is set to eternal but also has TTI/TTL set.  To avoid this warning, clean up the config removing conflicting values of eternal, TTI and TTL. Effective configuration for Cache 'null' will be eternal='true', timeToIdleSeconds='0', timeToLiveSeconds='0'.
+2017-03-10 19:36:44.858 [main] WARN  net.sf.ehcache.config.CacheConfiguration - Configuration problem for cache forever: MaxEntriesLocalHeap equal or greater than MaxEntriesLocalDisk. This will result in useless disk storage.
+2017-03-10 19:36:44.907 [main] WARN  net.sf.ehcache.config.CacheConfiguration - Cache: report_oneday has a maxElementsInMemory of 0. This might lead to performance degradation or OutOfMemoryError at Terracotta client.From Ehcache 2.0 onwards this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory
+2017-03-10 19:36:44.974 [main] INFO  org.dozer.config.GlobalSettings - Trying to find Dozer configuration file: dozer.properties
+2017-03-10 19:36:44.981 [main] INFO  org.dozer.config.GlobalSettings - Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2017-03-10 19:36:44.984 [main] INFO  org.dozer.DozerInitializer - Initializing Dozer.  Version: 5.2.1, Thread Name:main
+2017-03-10 19:36:44.987 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2017-03-10 19:36:44.988 [main] INFO  org.dozer.jmx.JMXPlatformImpl - Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2017-03-10 19:36:44.993 [main] INFO  org.dozer.DozerBeanMapper - Initializing a new instance of the dozer bean mapper.
+2017-03-10 19:36:45.183 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase -2147482648
+2017-03-10 19:36:45.186 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3122 ms
+2017-03-10 19:36:45.196 [main] INFO  c.d.f.server.netty.servlet.impl.ServletContextImpl - Initializing Spring FrameworkServlet 'DispatcherServlet'
+2017-03-10 19:36:45.198 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'DispatcherServlet': initialization started
+2017-03-10 19:36:45.200 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'DispatcherServlet-servlet': startup date [Fri Mar 10 19:36:45 CST 2017]; parent: Root WebApplicationContext
+2017-03-10 19:36:45.202 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [dk3k-gateway-servlet.xml]
+2017-03-10 19:36:45.434 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-03-10 19:36:45.558 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/server/checkServer],methods=[GET],produces=[application/json]}" onto public com.dk3k.framework.core.dto.ResponseEntity com.dk3k.framework.core.web.ServerController.checkServer()
+2017-03-10 19:36:45.558 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/server/getActiveMap],methods=[GET],produces=[application/json]}" onto public com.dk3k.framework.core.dto.ResponseEntity com.dk3k.framework.core.web.ServerController.getActiveMap()
+2017-03-10 19:36:45.891 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'DispatcherServlet-servlet': startup date [Fri Mar 10 19:36:45 CST 2017]; parent: Root WebApplicationContext
+2017-03-10 19:36:46.023 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'DispatcherServlet-servlet': startup date [Fri Mar 10 19:36:45 CST 2017]; parent: Root WebApplicationContext
+2017-03-10 19:36:46.123 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'DispatcherServlet': initialization completed in 925 ms
+2017-03-10 19:36:46.400 [nioEventLoopGroup-2-1] ERROR io.netty.handler.logging.LoggingHandler - [id: 0xaa055131] REGISTERED
+2017-03-10 19:36:46.401 [nioEventLoopGroup-2-1] ERROR io.netty.handler.logging.LoggingHandler - [id: 0xaa055131] BIND: 0.0.0.0/0.0.0.0:8080
+2017-03-10 19:36:46.402 [main] INFO  c.dk3k.framework.server.netty.NettyServerBootstrap - Running http netty server on 8080 ...
+2017-03-10 19:36:46.403 [nioEventLoopGroup-2-1] ERROR io.netty.handler.logging.LoggingHandler - [id: 0xaa055131, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-03-10 19:37:03.661 [nioEventLoopGroup-2-1] ERROR io.netty.handler.logging.LoggingHandler - [id: 0xaa055131, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xc0a194d0, L:/127.0.0.1:8080 - R:/127.0.0.1:53935]

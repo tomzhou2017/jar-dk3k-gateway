@@ -2,8 +2,6 @@ package com.dk3k.framework.server.netty.servlet.exception;
 
 /**
  * 
- * @author liat.zhang@gmail.com
- * @date 2016年9月14日-下午9:21:40
  * @description <code>NettyServletRuntimeException</code>
  *
  */

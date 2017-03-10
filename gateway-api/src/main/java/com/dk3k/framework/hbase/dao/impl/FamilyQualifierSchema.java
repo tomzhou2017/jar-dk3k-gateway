@@ -7,7 +7,6 @@ import java.util.Map;
 /**
  * family and qualifier
  *
- * Created by lilin on 2016/11/12.
  */
 public class FamilyQualifierSchema {
 

@@ -11,9 +11,6 @@ import org.slf4j.LoggerFactory;
 import java.util.Properties;
 
 
-/**
- * Created by lilin on 2016/11/11.
- */
 public class HBaseConnectionPool {
 
     private static final Logger logger = LoggerFactory.getLogger(HBaseConnectionPool.class);

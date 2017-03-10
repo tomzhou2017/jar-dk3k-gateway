@@ -15,13 +15,6 @@ import org.slf4j.LoggerFactory;
 
 import com.dk3k.framework.server.netty.servlet.async.ThreadLocalAsyncExecutor;
 
-/**
- * 
- * @author liat.zhang@gmail.com
- * @date 2016年9月15日-下午9:03:15
- * @description
- *
- */
 public class AsyncHttpServletHandler extends ChannelInboundHandlerAdapter {
 
 	private static final Logger logger = LoggerFactory.getLogger(AsyncHttpServletHandler.class);

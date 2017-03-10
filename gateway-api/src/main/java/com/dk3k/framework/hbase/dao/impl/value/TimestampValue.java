@@ -4,9 +4,6 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 import java.sql.Timestamp;
 
-/**
- * Created by lilin on 2016/11/14.
- */
 public class TimestampValue implements Value {
 
     private Timestamp timestampValue;

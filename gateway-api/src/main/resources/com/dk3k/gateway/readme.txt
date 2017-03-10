@@ -1,1 +1,1 @@
-运行com.dk3k.gateway.netty。MyServer启动程序
+这里防止mybatis查询sql配置xml文件

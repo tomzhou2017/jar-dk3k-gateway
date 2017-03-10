@@ -41,8 +41,6 @@ import com.dk3k.framework.server.netty.utils.Utils;
 
 /**
  * 
- * @author liat.zhang@gmail.com
- * @date 2016年9月16日-下午10:02:06
  * @description <code>HttpServletHandler</code>是基于Netty
  *              {@link io.netty.channel.ChannelHandler}的请求处理器
  *              </p>

@@ -9,7 +9,6 @@ import java.util.Map;
 /**
  * like a map from a family to a list of qualifers
  * <p>
- * Created by lilin on 2016/11/12.
  */
 public class FamilyToQualifersAndValues {
 

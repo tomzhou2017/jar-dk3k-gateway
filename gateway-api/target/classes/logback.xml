@@ -56,9 +56,9 @@
      </appender> -->
 
     <!-- spring -->
-    <logger name="org.springframework" additivity="true" level="WARN"/>
+   <!--  <logger name="org.springframework" additivity="true" level="WARN"/>
 
-    <logger name="com.dk3k.gateway" additivity="true" level="DEBUG"/>
+    <logger name="com.dk3k.gateway" additivity="true" level="DEBUG"/> -->
 
     <!--myibatis log configure -->
     <logger name="com.apache.ibatis" level="DEBUG"/>
@@ -70,7 +70,7 @@
     <logger name="org.apache.activemq" level="OFF"/>
 
     <!-- 日志输出级别 -->
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </root>

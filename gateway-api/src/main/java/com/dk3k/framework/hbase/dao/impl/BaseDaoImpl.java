@@ -35,10 +35,6 @@ import com.dk3k.framework.hbase.dao.model.Page;
 import com.dk3k.framework.hbase.exception.HBaseORMException;
 import com.dk3k.framework.hbase.support.BeanUtil;
 
-/**
- * Created by lilin on 2016/11/11.
- * lait  on 20161227
- */
 public abstract class BaseDaoImpl<T> implements Dao<T> {
     protected Logger logger = LoggerFactory.getLogger(this.getClass());
     private Class<T> clazz;

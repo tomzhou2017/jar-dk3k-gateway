@@ -35,8 +35,6 @@ import java.security.KeyStore;
 
 /**
  * 
- * @author liat.zhang@gmail.com
- * @date 2016年9月16日-下午10:01:12
  * @description <code>HttpChannelInitializer</code>用于注册http请求相关的Handler
  *
  */

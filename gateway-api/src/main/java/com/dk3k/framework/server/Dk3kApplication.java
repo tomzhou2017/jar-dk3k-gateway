@@ -9,8 +9,6 @@ import java.io.FileNotFoundException;
 
 /**
  *
- * @author liat.zhang@gmail.com
- * @date 2016年9月15日-下午9:19:23
  * @description <code>NettyServerBootstrap</code>服务器引导程序类，用于调度服务器启动接口
  *
  */

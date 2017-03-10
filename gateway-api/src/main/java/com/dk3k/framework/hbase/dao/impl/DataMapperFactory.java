@@ -24,7 +24,6 @@ import com.dk3k.framework.hbase.exception.HBaseORMException;
  * This is factory of DataMapper, each Type can has one DataMapperFactory and
  * the factory can create DataMapper according to the instance
  * <p/>
- * Created by lilin on 2016/11/12.
  */
 public class DataMapperFactory<T> {
 

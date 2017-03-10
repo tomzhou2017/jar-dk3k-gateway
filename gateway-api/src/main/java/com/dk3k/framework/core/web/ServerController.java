@@ -35,9 +35,6 @@ public class ServerController {
 	 * 
 	 * Description:供后台配置系统访问,测试本系统是否宕机
 	 * 
-	 * @return
-	 * @author xiongweitao
-	 * @date 2016年3月10日 下午5:55:33
 	 */
 	@RequestMapping(value = "checkServer", method = RequestMethod.GET,produces="application/json")
 	public ResponseEntity checkServer() {
@@ -59,10 +56,6 @@ public class ServerController {
 	/**
 	 * 
 	 * Description:供外部访问,获取动态系统参数列表
-	 * 
-	 * @return
-	 * @author xiongweitao
-	 * @date 2016年3月10日 下午5:55:56
 	 */
 	@RequestMapping(value = "getActiveMap", method = RequestMethod.GET,produces="application/json")
 	public ResponseEntity getActiveMap() {

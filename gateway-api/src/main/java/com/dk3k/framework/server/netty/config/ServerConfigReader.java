@@ -8,8 +8,6 @@ import org.springframework.core.io.Resource;
 
 /**
  * 
- * @author liat.zhang@gmail.com
- * @date 2016年9月16日-下午10:15:47
  * @description <code>ConfigurationReader</code>类是配置项读取器
  *              <p>
  *              功能详细描述：系统加载时，本读取器将加载<b>server.properties</b>配置文件并读取所有配置项缓存到系统内存中。
@@ -18,7 +16,6 @@ import org.springframework.core.io.Resource;
  *              ServerConfigReader configReader = ServerConfigReader.getInstance();
  *              String appServerUrl = configReader.getString(&quot;app.server.port&quot;);
  *              </pre>
- *
  */
 public final class ServerConfigReader {
 	/** 默认读取配置文件的路径*/

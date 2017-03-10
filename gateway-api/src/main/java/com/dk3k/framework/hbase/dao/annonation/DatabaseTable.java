@@ -5,9 +5,6 @@ import java.lang.annotation.Target;
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-/**
- * Created by lilin on 2016/11/11.
- */
 @Target(TYPE)
 @Retention(RUNTIME)
 public @interface DatabaseTable {

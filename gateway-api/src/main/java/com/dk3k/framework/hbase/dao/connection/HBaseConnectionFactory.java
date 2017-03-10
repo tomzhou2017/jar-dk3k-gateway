@@ -6,9 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
 
-/**
- * Created by lilin on 2016/11/11.
- */
 public class HBaseConnectionFactory implements PoolableObjectFactory<Connection> {
 
     private static final Logger logger = LoggerFactory.getLogger(HBaseConnectionFactory.class);

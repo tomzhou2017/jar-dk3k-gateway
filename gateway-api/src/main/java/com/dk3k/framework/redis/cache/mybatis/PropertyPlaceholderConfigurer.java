@@ -15,8 +15,6 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
  *
  * @PackageName:com.dk3k.framework.spring.property
  * @ClassName:PropertyPlaceholderConfigurer
- * @author xiongweitao
- * @date 2016年3月9日 上午11:28:27
  */
 @SuppressWarnings("all")
 public class PropertyPlaceholderConfigurer extends org.springframework.beans.factory.config.PropertyPlaceholderConfigurer {
@@ -40,8 +38,6 @@ public class PropertyPlaceholderConfigurer extends org.springframework.beans.fac
 	 * 改为使用CacheManager.getStaticMapValue(key)方法获取
 	 * @param name
 	 * @return
-	 * @author xiongweitao
-	 * @date 2016年3月9日 上午11:32:28
 	 */
 	public static Object getContextProperty(String name) {
 		// return ctxPropertiesMap.get(name);

@@ -14,8 +14,6 @@ import io.netty.channel.group.ChannelGroup;
 
 /**
  * 
- * @author liat.zhang@gmail.com
- * @date 2016年9月15日-下午9:11:45
  * @description <code>ChannelInitializerWrapper</code>是Channel Handler与业务容器的包装类
  *
  */
