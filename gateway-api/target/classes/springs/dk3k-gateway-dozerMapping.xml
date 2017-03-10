@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+    
+    <!-- 实体映射转换配置举例
+    <mapping>
+        <class-a>com.mobanker.bigdata.sensor.rca.contract.BigDataRcaBorrowFeatureDto</class-a>
+        <class-b>com.mobanker.bigdata.infrastructures.contract.norm.dto.UserOrderFeatureDto</class-b>
+        <field>
+            <a>name</a>
+            <b>keyId</b>
+        </field>
+    </mapping>
+     -->
+</mappings>

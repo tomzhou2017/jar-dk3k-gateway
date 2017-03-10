@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+
+	<!-- 引入系统级切面 -->
+	<import resource="classpath:/springs/dk3k-gateway-spring-aop.xml" />
+	<!-- 引入Dubbo服务生产配置 -->
+	<!-- <import resource="classpath:/springs/dk3k-gateway-dubbo-provider.xml" /> -->
+	<!-- 引入Dubbo服务消费配置 -->
+	<!-- <import resource="classpath:/springs/dk3k-gateway-dubbo-consumer.xml" /> -->
+	<!-- 引入MQ服务生产配置 -->
+	<import resource="classpath:/springs/dk3k-gateway-rabbitmq-producer.xml" />
+	
+	<!-- 引入数据库配置 -->
+	<import resource="classpath:/springs/dk3k-gateway-database.xml" />
+	<!-- 引入redis配置 -->
+	<import resource="classpath:/springs/dk3k-gateway-redis.xml" />
+	<!-- 引入spring-ehcache配置 -->
+	<import resource="classpath:/springs/dk3k-gateway-spring-ehcache.xml" />
+
+	
+	<!-- dozer组件  -配置属性映射-->
+	<bean id="mapper" class="org.dozer.spring.DozerBeanMapperFactoryBean">
+		<property name="mappingFiles">
+			<list>
+				<value>classpath:springs/dk3k-gateway-dozerMapping.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	
+	
+	<!-- 框架引用 -Hbase-->
+	<import resource="classpath:/springs/dk3k-fx-hbase.xml" />
+	<!-- 框架引用 -rabbitmq-->
+	<import resource="classpath:/springs/dk3k-fx-rabbitmq.xml" />
+
+</beans>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="
+       	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+							http://www.springframework.org/schema/data/mongo
+        					http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd">
+
+    <context:annotation-config/>
+
+    <!-- 加载配置conf.properties -->
+    <context:property-placeholder location="classpath:conf.properties" ignore-unresolvable="true" />
+
+    <!-- dbcp数据源 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!-- 事务 控制 begin -->
+    <bean name="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!-- 事务 控制 end -->
+
+    <!-- 将mapping文件和Dao映射 end -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.dk3k.gateway.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+    <!-- 自动扫描mapping文件 start -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- <property name="configLocation" value="classpath:mybatis-config.xml" /> -->
+        <property name="mapperLocations">
+            <list>
+                <!-- 表示在mybatis/mappers包或以下所有目录中，以-Mapper.xml结尾所有文件 -->
+                <value>classpath*:/com/dk3k/gateway/**/*.xml</value>
+            </list>
+        </property>
+        <property name="typeAliasesSuperType" value="com.dk3k.framework.core.entity.BaseEntity"/>
+        <property name="configurationProperties">
+            <props>
+                <prop key="dialect">mysql</prop>
+            </props>
+        </property>
+        <property name="plugins">
+            <list>
+                <bean class="com.mobanker.framework.mybatis.SqlInterceptor"/>
+                <bean class="com.mobanker.framework.mybatis.interceptors.EEInterceptor">
+                    <property name="jdbcUrl" value="${jdbc.url}"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+    <!-- 自动扫描mapping文件 end -->
+
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+
+
+</beans>

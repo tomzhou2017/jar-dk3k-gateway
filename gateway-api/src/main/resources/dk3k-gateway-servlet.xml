@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+       http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	<!-- 引入健康检查 -->
+	<bean class="com.dk3k.framework.core.web.ServerController"></bean>
+
+	<aop:config proxy-target-class="true" />
+	<!--注册annotation -->
+	<context:annotation-config />
+
+	<context:component-scan base-package="com.dk3k.gateway.**.controller" name-generator="com.dk3k.framework.server.netty.spring.FullPackageBeanNameGenerator">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" />
+	</context:component-scan>
+	<mvc:annotation-driven conversion-service="conversionService">
+		<!--异步支持 -->
+		<mvc:async-support default-timeout="10" task-executor="asyncTaskExecutor">
+			<mvc:callable-interceptors>
+				<bean class="com.dk3k.framework.server.netty.servlet.async.AsyncInterceptor" />
+			</mvc:callable-interceptors>
+		</mvc:async-support>
+		<mvc:message-converters register-defaults="true">
+			<bean id="fastJsonHttpMessageConverter" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>application/json;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	<bean id="asyncTaskExecutor" class="com.dk3k.framework.server.netty.servlet.async.ThreadLocalAsyncExecutor" />
+
+	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="converters">
+			<set>
+				<!-- <bean class="com.dk3k.framework.convert.String2DateConverter" /> -->
+				<!-- <bean class="com.dk3k.framework.convert.Date2StringConverter" /> -->
+			</set>
+		</property>
+	</bean>
+
+	<!--<mvc:interceptors> -->
+	<!--<mvc:interceptor> -->
+	<!--<mvc:mapping path="/**" /> -->
+	<!--&lt;!&ndash; 加密 &ndash;&gt; -->
+	<!--<bean class="com.mobanker.tkj.cust.interceptor.CustomerLoginAndSignInterceptor" /> -->
+	<!--</mvc:interceptor> -->
+	<!--</mvc:interceptors> -->
+</beans>
