@@ -56,10 +56,10 @@
         </property>
         <property name="plugins">
             <list>
-                <bean class="com.mobanker.framework.mybatis.SqlInterceptor"/>
-                <bean class="com.mobanker.framework.mybatis.interceptors.EEInterceptor">
+                <bean class="com.dk3k.framework.core.mybatis.SqlInterceptor"/>
+                <!-- <bean class="com.dk3k.framework.mybatis.interceptors.EEInterceptor">
                     <property name="jdbcUrl" value="${jdbc.url}"/>
-                </bean>
+                </bean> -->
             </list>
         </property>
     </bean>

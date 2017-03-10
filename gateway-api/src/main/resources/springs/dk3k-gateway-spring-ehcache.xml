@@ -21,7 +21,7 @@
     <!-- 引入缓存 -->
     <cache:annotation-driven cache-manager="cacheManager"/>
     <bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"
-          p:shared="true" p:configLocation="classpath:/dk3k-gateway-spring-ehcache.xml"/>
+          p:shared="true" p:configLocation="classpath:/ehcache.xml"/>
 
     <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager"
           p:cacheManager-ref="cacheManagerFactory"/>

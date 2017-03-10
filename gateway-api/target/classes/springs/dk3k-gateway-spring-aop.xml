@@ -32,7 +32,7 @@
 	</bean>
 
 	<!-- 异常捕获AOP  start -->
-	<bean id="dealRunTimeException" class="com.mobanker.dataclean.model.aop.AopException"/>
+	<bean id="dealRunTimeException" class="com.dk3k.gateway.model.aop.AopException"/>
 
 
 </beans>

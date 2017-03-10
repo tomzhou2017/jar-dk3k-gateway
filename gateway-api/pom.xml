@@ -319,7 +319,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.5</version>
+			<version>1.7.21</version>
 		</dependency>
 
 		<dependency>
@@ -481,6 +481,12 @@
 		</dependency>
 		
 		<!-- add up start -->
+		<dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+			<version>5.2.1</version>
+		</dependency>
+			
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.1-api</artifactId>
